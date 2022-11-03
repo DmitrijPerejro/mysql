@@ -66,7 +66,8 @@
   $indexes = [
     'title' => 'CREATE UNIQUE INDEX `index_title` ON `auction`(`title`)',
     'price' => 'CREATE INDEX `index_price` ON `auction`(`price`)',
-    'priceAndSold' => 'CREATE INDEX `index_price_sold` on `auction`(`price`, `sold`)',
+    'sold' => 'CREATE INDEX `index_sold` ON `auction`(`sold`)',
+    'soldAndCountry' => 'CREATE INDEX `index_sold_country` on `auction`(`sold`, `country`)',
   ];
   
   foreach ($indexes as $key => $value) {
